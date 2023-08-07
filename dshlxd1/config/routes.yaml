@@ -1,0 +1,27 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+app_new_controller:
+  path: /
+  controller: App\Controller\NewController::homepage
+
+app_new_controller2:
+  path: /list
+  controller: App\Controller\NewController::something
+
+app_task_controller:
+  path: /forms
+  controller: App\Controller\TaskController::new
+
+app_taskdb_controller:
+  path: /task
+  controller: App\Controller\TaskdbController::createTask
+
+app_task-manager_controller:
+  path: /list/manager
+  controller: App\Controller\TaskController::delete
+
+app_status-edit_controller:
+  path: /list/status_edit/{id}
+  controller: App\Controller\NewController::edit_status

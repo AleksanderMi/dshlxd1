@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row mt-5">
+        <h1 class="d-inline">Lista</h1>
+        <h2 class="mb-4">Take rzeczy do zrobienia:</h2>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-4 ps-5">
+            {% for task in taski %}
+            <div class="song-list">
+                <div class="d-flex mb-3">
+                    <a href="#">
+                        <i class="far fa-star"></i>
+                    </a>
+                    <span class="song-details">{{ task }}</span>
+                </div>
+            </div>
+            {% endfor %}
+            <a href="/forms" class="btn btn-primary" role="button">add task</a>
+            <a href="/list/manager" class="btn btn-primary" role="button">delete task</a>
+            <a href="/" class="btn btn-primary" role="button">go back</a>
+        </div>
+        <div class="col-12 col-md-1">
+            <div class="song-list">
+                {% set i = 0 %}
+                {% for status in statusy %}
+                    {% set i = i+1 %}
+                <div class="d-flex mb-3 tutaj">
+                    <a href="#">
+                        {% if status == true %}
+{#                            <a href="list/status_edit/{{ i }}"><i class="fas fa-check";></i></a>#}
+                            <a href="#"><i class="fas fa-check";></i></a>
+                        {% else %}
+                            {#<a href="list/status_edit/{{ i }}"><i class="fas fa-times";></i></a>#}
+                            <a href="#"><i class="fas fa-times";></i></a>
+                        {% endif %}
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-12 col-md-7">
+            <div class="row">
+                <svg width="150%" height="100%" viewBox="0 0 900 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+                            <stop stop-color="#D0FF14" offset="0%"></stop>
+                            <stop stop-color="#7C0A02" offset="100%"></stop>
+                        </linearGradient>
+                    </defs>
+                    <g id="Mixed-Vinyl" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Group">
+                            <g id="record-vinyl" transform="translate(100.000000, -100.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+                                <path d="M104,0 C46.562386,0 0,46.562386 0,104 C0,161.437614 46.562386,208 104,208 C161.437614,208 208,161.437614 208,104 C208,46.562386 161.437614,0 104,0 L104,0 Z M104,128 C90.745166,128 80,117.254834 80,104 C80,90.745166 90.745166,80 104,80 C117.254834,80 128,90.745166 128,104 C128,117.254834 117.254834,128 104,128 Z" id="Shape"></path>
+                            </g>
+                            <g id="record-vinyl" transform="translate(400.000000, -100.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+                                <path d="M104,0 C46.562386,0 0,46.562386 0,104 C0,161.437614 46.562386,208 104,208 C161.437614,208 208,161.437614 208,104 C208,46.562386 161.437614,0 104,0 L104,0 Z M104,128 C90.745166,128 80,117.254834 80,104 C80,90.745166 90.745166,80 104,80 C117.254834,80 128,90.745166 128,104 C128,117.254834 117.254834,128 104,128 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="row">
+                <svg width="150%" height="100%" viewBox="0 0 900 169" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle stroke="#979797" fill="none" cx="350" cy="-230" r="300"></circle>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{#{% block javascripts %}#}
+{#    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>#}
+
+{#    <script src="{{ asset('js/status_change.js') }}"></script>#}
+{#{% endblock %}#}
