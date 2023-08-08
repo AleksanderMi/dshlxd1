@@ -26,16 +26,16 @@
             <div class="song-list tutaj">
                 {% set i = 0 %}
                 {% for status in statusy %}
-                    {% set i = i+1 %}
                 <div class="d-flex mb-3">
                     <a href="#" class="js-state">
                         {% if status == true %}
 {#                            <a href="list/status_edit/{{ i }}"><i class="fas fa-check";></i></a>#}
-                            <a href="#"><i class="fas fa-check" data-curr_num="{{ i }}";></i></a>
+                            <a href="#"><i class="fas fa-check" id="czek{{ ids[i] }}" data-curr_num="{{ ids[i] }}";></i></a>
                         {% else %}
                             {#<a href="list/status_edit/{{ i }}"><i class="fas fa-times";></i></a>#}
-                            <a href="#"><i class="fas fa-times" data-curr_num="{{ i }}" ;></i></a>
+                            <a href="#"><i class="fas fa-times" id="kros{{ ids[i] }}" data-curr_num="{{ ids[i] }}" ;></i></a>
                         {% endif %}
+                        {% set i = i+1 %}
                     </a>
                 </div>
                 {% endfor %}

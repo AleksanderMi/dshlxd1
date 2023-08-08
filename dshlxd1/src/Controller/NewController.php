@@ -28,14 +28,16 @@ class NewController extends AbstractController
         $count = 1;
         $tn = array();
         $ts = array();
+        $ti = array();
         $task=$taskRepository
             ->findAll();
         for ($i = 1; $i <= count($task); $i++)
         {
             $tn[] = $task[$i-1]->getTaskName();
             $ts[] = $task[$i-1]->getTaskStatus();
+            $ti[] = $task[$i-1]->getId();
         }
-        return $this->render('homepage/homepage1.html.twig', ['title'=>'homepage', 'taski'=>$tn, 'statusy'=>$ts]);
+        return $this->render('homepage/homepage1.html.twig', ['title'=>'homepage', 'taski'=>$tn, 'statusy'=>$ts, 'ids'=>$ti,]);
     }
 
     #[Route('/list/status_edit/{id}')]

@@ -10,9 +10,11 @@ $(document).ready(function() {
             dataType: 'json',
         }).then(function(data){
             if(!data.state){
-                location.reload();
+                document.getElementById('czek'+$link.data('curr_num')).className = ('fas fa-times');
+                document.getElementById('czek'+$link.data('curr_num')).id = 'kros'+$link.data('curr_num');
             } else {
-
+                document.getElementById('kros'+$link.data('curr_num')).className=('fas fa-check');
+                document.getElementById('kros'+$link.data('curr_num')).id = 'czek'+$link.data('curr_num');
             }
         });
     });
