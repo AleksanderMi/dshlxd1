@@ -6,4 +6,9 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+import '/public/styles/first.css';
+import $ from 'jquery';
+import greet from './greet';
+$(document).ready(function() {
+    $('body').prepend('<h1>'+greet('human')+'</h1>');
+});
