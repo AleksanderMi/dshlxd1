@@ -23,18 +23,18 @@
             <a href="/" class="btn btn-primary" role="button">go back</a>
         </div>
         <div class="col-12 col-md-1">
-            <div class="song-list">
+            <div class="song-list tutaj">
                 {% set i = 0 %}
                 {% for status in statusy %}
                     {% set i = i+1 %}
-                <div class="d-flex mb-3 tutaj">
-                    <a href="#">
+                <div class="d-flex mb-3">
+                    <a href="#" class="js-state">
                         {% if status == true %}
 {#                            <a href="list/status_edit/{{ i }}"><i class="fas fa-check";></i></a>#}
-                            <a href="#"><i class="fas fa-check";></i></a>
+                            <a href="#"><i class="fas fa-check" data-curr_num="{{ i }}";></i></a>
                         {% else %}
                             {#<a href="list/status_edit/{{ i }}"><i class="fas fa-times";></i></a>#}
-                            <a href="#"><i class="fas fa-times";></i></a>
+                            <a href="#"><i class="fas fa-times" data-curr_num="{{ i }}" ;></i></a>
                         {% endif %}
                     </a>
                 </div>
@@ -73,7 +73,6 @@
 {% endblock %}
 
 {#{% block javascripts %}#}
-{#    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>#}
-
+{#    {{ parent() }}#}
 {#    <script src="{{ asset('js/status_change.js') }}"></script>#}
 {#{% endblock %}#}

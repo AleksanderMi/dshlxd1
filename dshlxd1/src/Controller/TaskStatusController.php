@@ -28,9 +28,6 @@ class TaskStatusController extends AbstractController
                 $task->setTaskStatus(true);
             }
         $entityManager->flush();
-        //$alltasks = $entityManager->getRepository(Task::class)->findAll();
-        //return $this->json(['state'=>$task->getTaskStatus()]);
-        //return $this->json();
-        return $this->redirectToRoute('list');
+        return $this->json(['state'=>$task->getTaskStatus()]);
     }
 }

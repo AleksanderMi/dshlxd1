@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Taski;
 use App\Repository\TaskiRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -57,10 +58,8 @@ class NewController extends AbstractController
             $task->setTaskStatus(true);
         }
         $entityManager->flush();
-        //$alltasks = $entityManager->getRepository(Task::class)->findAll();
-        //return $this->json(['state'=>$task->getTaskStatus()]);
-        //return $this->json();
-        return $this->redirect('/list');
+
+        return new JsonResponse(['state'=>$task->getTaskStatus()]);
     }
 
 }
