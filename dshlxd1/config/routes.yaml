@@ -25,3 +25,11 @@ app_task-manager_controller:
 app_status-edit_controller:
   path: /list/status_edit/{id}
   controller: App\Controller\NewController::edit_status
+
+app_game_controller:
+  path: /game
+  controller: App\Controller\GameoneController::mainscreen
+
+app_game_1_controller:
+  path: /game/1
+  controller: App\Controller\GameoneController::load_1
