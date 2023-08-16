@@ -8,5 +8,6 @@ import './bootstrap.js';
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
-import '/public/styles/first.css';
+import './styles/first.css';
 import '/public/js/status_change.js';
+import 'bootstrap';

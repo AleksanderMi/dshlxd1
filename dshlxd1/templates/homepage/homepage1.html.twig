@@ -9,12 +9,12 @@
     <div class="row">
         <div class="col-12 col-md-4 ps-5">
             {% for task in taski %}
-            <div class="song-list">
+            <div class="task-list">
                 <div class="d-flex mb-3">
                     <a href="#">
                         <i class="far fa-star"></i>
                     </a>
-                    <span class="song-details">{{ task }}</span>
+                    <span class="task-details">{{ task }}</span>
                 </div>
             </div>
             {% endfor %}
@@ -23,7 +23,7 @@
             <a href="/" class="btn btn-primary" role="button">go back</a>
         </div>
         <div class="col-12 col-md-1">
-            <div class="song-list tutaj">
+            <div class="task-list tutaj">
                 {% set i = 0 %}
                 {% for status in statusy %}
                 <div class="d-flex mb-3">

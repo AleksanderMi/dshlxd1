@@ -4,11 +4,11 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.song-list i{
+.task-list i{
     margin-top: 5px;
 }
 
-.song-details {
+.task-details {
     color: #ffffff;
 }
 
@@ -27,7 +27,7 @@ body {
     color: #60b611;
 }
 
-.song-details {
+.task-details {
     /*background-color: #222F36;*/
     border-radius: 1px;
     padding: 1px;
@@ -50,4 +50,7 @@ body {
 
 .fixed_bottom {
     margin-top: 200px;
+}
+#head_main {
+    background-color: rgba(204, 182, 29, 0.78);
 }
