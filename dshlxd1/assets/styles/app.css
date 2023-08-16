@@ -3,3 +3,7 @@
 body {
     background-color: #17242C;
 }
+.form-inline {
+    position: relative;
+    right: 10px;
+}
