@@ -13,9 +13,6 @@ use App\Form\Type\CheckType;
 
 class NewController extends AbstractController
 {
-//    /**
-//     * @Route("/")
-//     */
     #[route('/')]
     public function homepage(Request $request)
     {
@@ -25,17 +22,16 @@ class NewController extends AbstractController
     #[route('/list', name:"list")]
     public function something(TaskiRepository $taskRepository): Response
     {
-        $count = 1;
         $tn = array();
         $ts = array();
         $ti = array();
-        $task=$taskRepository
+        $all_tasks=$taskRepository
             ->findAll();
-        for ($i = 1; $i <= count($task); $i++)
+        for ($i = 1; $i <= count($all_tasks); $i++)
         {
-            $tn[] = $task[$i-1]->getTaskName();
-            $ts[] = $task[$i-1]->getTaskStatus();
-            $ti[] = $task[$i-1]->getId();
+            $tn[] = $all_tasks[$i-1]->getTaskName();
+            $ts[] = $all_tasks[$i-1]->getTaskStatus();
+            $ti[] = $all_tasks[$i-1]->getId();
         }
         return $this->render('homepage/homepage1.html.twig', ['title'=>'homepage', 'taski'=>$tn, 'statusy'=>$ts, 'ids'=>$ti,]);
     }

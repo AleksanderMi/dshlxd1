@@ -1,8 +1,5 @@
-import $ from 'jquery';
-const oko1 = document.getElementById('oko1');
-const oko2 = document.getElementById('oko2');
-const usta = document.getElementById('usta');
-oko1.style.fill = "url(#linearGradient-1)";
+import $ from "jquery";
+
 let bool =1;
 $(document).ready(function() {
     let $container = $('.tutaj');
@@ -23,9 +20,13 @@ $(document).ready(function() {
             }
         });
     });
-   oko1.addEventListener('click', function(e){
+    document.getElementById('oko1').addEventListener('click', function(e){
         e.preventDefault();
-        console.log("klik");
+
+       const oko1 = document.getElementById('oko1');
+       const oko2 = document.getElementById('oko2');
+       const usta = document.getElementById('usta');
+       oko1.style.fill = "url(#linearGradient-1)";
         if (bool == 1) {
             oko1.style.fill = "url(#linearGradient-2)";
             oko2.style.fill = "url(#linearGradient-2)";
@@ -40,4 +41,5 @@ $(document).ready(function() {
         }
 
    });
+
 });

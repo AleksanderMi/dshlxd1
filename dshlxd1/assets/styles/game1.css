@@ -40,13 +40,13 @@ body {
     top: -100px;
     background-image: url("/public/images/cloud1234.png");
     background-size: cover;
-    animation: cloudan 4s infinite linear;
+    animation: cloudan 3s infinite linear;
 }
 :root {
     --left_pos: 435px;
 }
 .object_fall {
-    animation: objectan 1.5s infinite linear;
+    animation: objectan 1s infinite linear;
 }
 @keyframes objectan{
     0%{top: 10px; left: var(--left_pos)}

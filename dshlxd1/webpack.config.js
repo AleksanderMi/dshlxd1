@@ -22,6 +22,7 @@ Encore
      */
     .addEntry('app', './assets/app.js')
     .addEntry('game', './assets/game.js')
+    .addEntry('list', './assets/list.js')
 
     .autoProvidejQuery()
 

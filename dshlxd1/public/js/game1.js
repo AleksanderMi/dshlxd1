@@ -56,7 +56,7 @@ function obj_move(){
                  document.getElementById('score2').innerHTML = 0;
              }
 
-        },1480);
+        },985);
     }
 }
 
