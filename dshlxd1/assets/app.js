@@ -14,7 +14,7 @@ import './styles/first.css';
 import '/public/js/status_change.js';
 //import '/public/js/dx.all.js';
 import 'bootstrap';
-import dxDataGrid from "devextreme/ui/data_grid";
+//import dxDataGrid from "devextreme/ui/data_grid";
 //import 'devextreme/bundles/__internal/grids/data_grid/m_utils.js'
 const header = document.getElementById("header");
 header.className="navbar navbar-expand-lg navbar-light bg-light";

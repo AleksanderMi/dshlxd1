@@ -2,9 +2,9 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
-app_new_controller:
-  path: /
-  controller: App\Controller\NewController::homepage
+#app_new_controller:
+#  path: /
+#  controller: App\Controller\NewController::homepage
 
 app_new_controller2:
   path: /list
@@ -30,10 +30,14 @@ app_game_1_controller:
   path: /game/1
   controller: App\Controller\GameController::load_1
 
-app_list_dx_controller:
-  path: /list/dx
-  controller: App\Controller\ListController::list_dx
-
-app_list_dx_data_controller:
-  path: /list/dx/data
-  controller: App\Controller\ListController::list_dx_data
+#app_list_dx_controller:
+#  path: /list/dx
+#  controller: App\Controller\ListController::list_dx
+#
+#app_list_dx_data_controller:
+#  path: /list/dx/data
+#  controller: App\Controller\ListController::list_dx_data
+#
+#app_list_dx_datach_controller:
+#  path: /list/dx/data/change
+#  controller: App\Controller\ListController::change_data

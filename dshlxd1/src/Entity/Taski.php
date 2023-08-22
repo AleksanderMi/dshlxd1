@@ -19,6 +19,8 @@ class Taski
     #[ORM\Column]
     private ?bool $status = null;
 
+    private $all = array();
+
     public function getId(): ?int
     {
         return $this->id;
@@ -46,5 +48,13 @@ class Taski
         $this->status = $status;
 
         return $this;
+    }
+
+    public function getTaskAll()
+    {
+        $all[] = $this->id;
+        $all[] = $this->Task_name;
+        $all[] = $this->status;
+        return $all;
     }
 }

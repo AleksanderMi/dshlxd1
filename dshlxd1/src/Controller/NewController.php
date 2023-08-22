@@ -10,6 +10,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Form\Type\CheckType;
+use Symfony\Component\Routing\Annotation\Route;
+
 
 class NewController extends AbstractController
 {
